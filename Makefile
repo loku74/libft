@@ -6,7 +6,7 @@
 #    By: lbourniq <lbourniq@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/09 11:29:55 by lbourniq          #+#    #+#              #
-#    Updated: 2022/12/03 08:43:33 by lbourniq         ###   ########.fr        #
+#    Updated: 2022/12/03 08:56:43 by lbourniq         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -145,4 +145,4 @@ fclean:
 
 re: fclean all
 
-.PHONY: clean fclean re all~
+.PHONY: clean fclean re all
