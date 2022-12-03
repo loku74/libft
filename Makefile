@@ -6,7 +6,7 @@
 #    By: lbourniq <lbourniq@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/09 11:29:55 by lbourniq          #+#    #+#              #
-#    Updated: 2022/11/25 17:46:09 by lbourniq         ###   ########.fr        #
+#    Updated: 2022/12/03 08:43:33 by lbourniq         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -131,16 +131,18 @@ $(NAME): $(LIBFT_OBJS_FILES) $(FT_PRINTF_OBJS_FILES) $(GNL_OBJS_FILES)
 %.o: %.c Makefile $(ALL_HEADERS)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
-clean:
+clean: 
 	@$(RM) $(RM_FLAGS) $(LIBFT_OBJS_FILES) \
 	$(FT_PRINTF_OBJS_FILES) \
 	$(GNL_OBJS_FILES)
-	@echo "${PURPLE}-> All objs files removed successfully${NC}"
+	@echo "${PURPLE}-> All libft objs files removed successfully${NC}"
 
-fclean: clean
-	@$(RM) $(RM_FLAGS) $(NAME)
-	@echo "${PURPLE}-> $(NAME) removed successfully${NC}"
+fclean:
+	@$(RM) $(RM_FLAGS) $(NAME) $(LIBFT_OBJS_FILES) \
+	$(FT_PRINTF_OBJS_FILES) \
+	$(GNL_OBJS_FILES)
+	@echo "${PURPLE}-> $(NAME) and objs files removed successfully${NC}"
 
 re: fclean all
 
-.PHONY: clean fclean re all
+.PHONY: clean fclean re all~
